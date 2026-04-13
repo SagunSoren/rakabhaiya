@@ -20,7 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.className} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${poppins.className} h-full antialiased overflow-x-hidden`}
+    >
       <body className="min-h-full flex flex-col">
         <ScrollToTop />
         <WhatsAppButton />
