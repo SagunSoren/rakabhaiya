@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "@/myComponents/ScrolltoTop";
+import WhatsAppButton from "@/myComponents/Whatsapp";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
 });
 
@@ -23,11 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${poppins.className} h-full antialiased`}>
+      <body className="min-h-full flex flex-col">
+        <ScrollToTop />
+        <WhatsAppButton />
+        {children}
+      </body>
     </html>
   );
 }
