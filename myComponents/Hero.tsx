@@ -11,7 +11,7 @@ import HeroImageCard from "./Cards/HeroImageCard";
 import Autoplay from "embla-carousel-autoplay";
 const Hero = () => {
   return (
-    <div className="h-140 w-full">
+    <div className="h-200 w-full">
       <Carousel
         opts={{
           align: "start",

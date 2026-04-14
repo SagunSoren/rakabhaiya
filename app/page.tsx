@@ -6,19 +6,21 @@ import Featured from "@/myComponents/Featured";
 import Testimonital from "@/myComponents/Testimonial";
 import MadebyWomen from "@/myComponents/MadebyWomen";
 import Services from "@/myComponents/Services";
+import HappyCustomer from "@/myComponents/Cards/HappyCustomer";
+import FollowInstagram from "@/myComponents/FollowInstagram";
 
 const page = () => {
   return (
     <div>
-      <Navbar />
       <Hero />
       <Explore />
       <Featured />
       <Services />
       <MadebyWomen />
+      <HappyCustomer />
       <Testimonital />
+      <FollowInstagram />
 
-      <Footer />
     </div>
   );
 };

@@ -3,6 +3,9 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "@/myComponents/ScrolltoTop";
 import WhatsAppButton from "@/myComponents/Whatsapp";
+import { cormorant } from "@/lib/fonts";
+import Navbar from "@/myComponents/Navbar";
+import Footer from "@/myComponents/Footer";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "700"],
@@ -22,12 +25,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.className} h-full antialiased overflow-x-hidden`}
+      className={`${poppins.className} ${cormorant.variable} h-full antialiased overflow-x-hidden`}
     >
       <body className="min-h-full flex flex-col">
+        <Navbar />
         <ScrollToTop />
         <WhatsAppButton />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -21,6 +21,7 @@ const Footer = () => {
                   alt="Logo"
                   width={200}
                   height={100}
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
               </h1>
             </div>
@@ -31,7 +32,9 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-2">
               <FaLongArrowAltRight />
-              <p className="text-orange-600">Find more</p>
+              <Link href={"/aboutus"}>
+                <p className="text-orange-600">Find more</p>
+              </Link>
             </div>
           </div>
         </div>
@@ -76,14 +79,14 @@ const Footer = () => {
               <FaFacebook className="text-white" />
             </div>
             <div className="h-12 flex items-center justify-center w-12 bg-orange-400 rounded-full text-2xl">
-              <Link
-                target="blank"
+              <a
+                target="_blank"
                 href={
                   "https://www.instagram.com/aarucreatives.0?igsh=aW9hZHhhN3FkdHdx"
                 }
               >
                 <FaInstagram className="text-white" />
-              </Link>
+              </a>
             </div>
             <div className="h-12 flex items-center justify-center  w-12 bg-red-400 rounded-full text-2xl">
               <FaYoutube className="text-white" />
@@ -97,12 +100,15 @@ const Footer = () => {
 
       <div className="max-w-7xl mx-auto px-4 text-black flex text-sm justify-between pb-4">
         <p>© 2026 Aaru Creatives</p>
-        <div className="flex gap-8">
+        <div className="flex gap-8 max-lg:hidden">
           <Link href="/">
             <p>Home</p>
           </Link>
-          <Link href="/contactUs">
-            <p>Contact</p>
+          <Link href="/aboutus">
+            <p>About Us</p>
+          </Link>
+          <Link href="/contactus">
+            <p>Contact Us</p>
           </Link>
         </div>
       </div>

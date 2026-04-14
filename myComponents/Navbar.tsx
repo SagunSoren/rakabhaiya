@@ -12,13 +12,15 @@ import Image from "next/image";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
+import Link from "next/link";
+import { FaInstagram } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
-    <div className="py-2">
+    <div className="py-1">
       <div className="flex items-center justify-between px-4 mb-4  ">
-        <div className="flex-1">
-          <div className="lg:hidden">
+        <div className=" lg:hidden">
+          <div className="">
             <Drawer direction="left">
               <DrawerTrigger>
                 <GiHamburgerMenu size={20} className="text-gray-500" />
@@ -31,12 +33,15 @@ const Navbar = () => {
                     </button>
                   </DrawerClose>
                   <DrawerDescription className="flex flex-col gap-4 mt-10">
-                    <p className="text-xl uppercase">Shop</p>
-                    <p className="text-xl uppercase">Giftables</p>
-                    <p className="text-xl uppercase">Collections</p>
-                    <div className="h-0.5 bg-gray-300 w-full"></div>
-                    <p className="text-xl uppercase">About Us</p>
-                    <p className="text-xl uppercase">Contact Us</p>
+                    <Link href={"/"}>
+                      <p className="text-xl uppercase">Collections</p>
+                    </Link>
+                    <Link href={"/aboutus"}>
+                      <p className="text-xl uppercase">About Us</p>
+                    </Link>
+                    <Link href={"/contactus"}>
+                      <p className="text-xl uppercase">Contact Us</p>
+                    </Link>
                   </DrawerDescription>
                 </DrawerHeader>
               </DrawerContent>
@@ -46,19 +51,39 @@ const Navbar = () => {
         <Image
           src={"/logotrabg.png"}
           alt="logo"
-          width={200}
-          height={200}
+          width={180}
+          height={180}
           priority
+          sizes="(max-width: 1024px) 50vw, 25vw"
         ></Image>
-        <div className="flex-1 flex justify-end items-center">
-          <FaPhoneAlt />
+        <div className="flex justify-between gap-10 max-lg:hidden">
+          <Link href="/">
+            <p className="uppercase tracking-wider hover:underline underline-offset-8">
+              Collections
+            </p>
+          </Link>
+          <Link href="/aboutus">
+            <p className="uppercase tracking-wider hover:underline underline-offset-8">
+              About us
+            </p>
+          </Link>
+          <Link href="/contactus">
+            <p className="uppercase tracking-wider hover:underline underline-offset-8">
+              Contact Us
+            </p>
+          </Link>
         </div>
-      </div>
-      <div className="flex items-center justify-center gap-10 uppercase tracking-wider max-lg:hidden">
-        <p>Shop</p>
-        <p>Giftables</p>
-        <p>Collections</p>
-        <p>About Us</p>
+        <a
+          href={
+            "https://www.instagram.com/aarucreatives.0?igsh=aW9hZHhhN3FkdHdx"
+          }
+          target="_blank"
+        >
+          <div className=" flex max-lg:flex-1 justify-end items-center gap-2">
+            <FaInstagram className="text-2xl" />
+            <p className="uppercase max-lg:hidden">Follow Us</p>
+          </div>
+        </a>
       </div>
     </div>
   );
