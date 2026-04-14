@@ -33,15 +33,21 @@ const Navbar = () => {
                     </button>
                   </DrawerClose>
                   <DrawerDescription className="flex flex-col gap-4 mt-10">
-                    <Link href={"/"}>
-                      <p className="text-xl uppercase">Collections</p>
-                    </Link>
-                    <Link href={"/aboutus"}>
-                      <p className="text-xl uppercase">About Us</p>
-                    </Link>
-                    <Link href={"/contactus"}>
-                      <p className="text-xl uppercase">Contact Us</p>
-                    </Link>
+                    <DrawerClose asChild>
+                      <Link href={"/"}>
+                        <p className="text-xl uppercase">Collections</p>
+                      </Link>
+                    </DrawerClose>
+                    <DrawerClose asChild>
+                      <Link href={"/aboutus"}>
+                        <p className="text-xl uppercase">About Us</p>
+                      </Link>
+                    </DrawerClose>
+                    <DrawerClose asChild>
+                      <Link href={"/contactus"}>
+                        <p className="text-xl uppercase">Contact Us</p>
+                      </Link>
+                    </DrawerClose>
                   </DrawerDescription>
                 </DrawerHeader>
               </DrawerContent>
