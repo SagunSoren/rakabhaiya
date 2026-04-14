@@ -34,6 +34,9 @@ const Hero = () => {
           <CarouselItem>
             <HeroImageCard imagesrc="/hero/image3.png" />
           </CarouselItem>
+          <CarouselItem>
+            <HeroImageCard imagesrc="/hero/image4.png" />
+          </CarouselItem>
         </CarouselContent>
         {/* <CarouselPrevious />
         <CarouselNext /> */}
