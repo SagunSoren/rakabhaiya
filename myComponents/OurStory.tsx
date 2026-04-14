@@ -6,9 +6,9 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const OurStory = () => {
   return (
     <div>
-      <div className="bg-white w-full h-200 p-20">
-        <div className="bg-[#f8f6f4] w-full h-full flex">
-          <div className="w-1/2 h-full relative">
+      <div className="bg-white w-full h-200 max-lg:h-full p-20 max-lg:p-2">
+        <div className="bg-[#f8f6f4] w-full h-full flex max-lg:flex-col">
+          <div className="w-1/2 h-full relative max-lg:w-full max-lg:h-100">
             <Image
               src={"/hero/image1.png"}
               alt="image"
@@ -16,9 +16,11 @@ const OurStory = () => {
               className="object-cover"
             ></Image>
           </div>
-          <div className="w-1/2 p-10 flex flex-col gap-10 ">
+          <div className="w-1/2 p-10 flex flex-col gap-10 max-lg:w-full ">
             <h1 className="uppercase tracking-widest">Our story</h1>
-            <p className={`text-7xl ${cormorant.className} font-bold`}>
+            <p
+              className={`text-7xl max-lg:text-5xl ${cormorant.className} font-bold`}
+            >
               Designed by women who lead,{" "}
               <span className="text-pink-600">for women who inspire </span>
             </p>
@@ -34,7 +36,7 @@ const OurStory = () => {
             </p>
             <Link
               href={"/"}
-              className="bg-[#292421] text-white text-2xl uppercase px-10 py-4 flex w-fit items-center gap-4"
+              className="bg-[#292421] text-white text-2xl max-lg:text-xl uppercase px-10 py-4 flex w-fit items-center gap-4"
             >
               View Collection <FaArrowRightLong />
             </Link>
